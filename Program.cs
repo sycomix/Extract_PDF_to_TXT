@@ -39,14 +39,9 @@ namespace Extract_PDF_to_TXT
             Application.Run(new Form1());
         }
 
-        /// <summary>
-        /// Di chuyển các file DLL, PDB, DEPS, RUNTIMECONFIG vào thư mục "Libs"
-        /// </summary>
         static void MoveFilesToLibs(string libsPath)
         {
             string appPath = AppDomain.CurrentDomain.BaseDirectory;
-
-            // Danh sách các phần mở rộng file cần di chuyển
             string[] extensions = { "*.dll", "*.pdb", "*.deps.json", "*.runtimeconfig.json" };
 
             foreach (string ext in extensions)
@@ -55,7 +50,7 @@ namespace Extract_PDF_to_TXT
                 foreach (var file in files)
                 {
                     string destFile = Path.Combine(libsPath, Path.GetFileName(file));
-                    if (!File.Exists(destFile)) // Tránh ghi đè nếu đã có
+                    if (!File.Exists(destFile)) 
                     {
                         File.Move(file, destFile);
                     }
