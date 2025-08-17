@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BouncyCastle.Cryptography" Version="2.5.1" />
-    <PackageReference Include="iText7" Version="9.1.0" />
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.7.0-beta.98" />
+    <PackageReference Include="itext" Version="9.2.0" />
   </ItemGroup>
 
 </Project>
