@@ -33,13 +33,13 @@ namespace Extract_PDF_to_TXT
 
             if (string.IsNullOrEmpty(pdfPath) || string.IsNullOrEmpty(outputFolder))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ đường dẫn!", "Lỗi chọn file PDF", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter the full path!", "Error selecting PDF file", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (!File.Exists(pdfPath))
             {
-                MessageBox.Show("Tệp PDF không tồn tại!", "Lỗi chọn folder Extract", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("PDF file does not exist!", "Error selecting Extract folder", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -60,7 +60,7 @@ namespace Extract_PDF_to_TXT
             {
                 progressBar_pdf2txt.Visible = false;
                 btnExtract.Enabled = true;
-                MessageBox.Show("Trích xuất thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Extraction successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             };
 
             bgWorker.RunWorkerAsync();
@@ -91,7 +91,7 @@ namespace Extract_PDF_to_TXT
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "PDF Files|*.pdf";
-                openFileDialog.Title = "Chọn file PDF";
+                openFileDialog.Title = "Select PDF file";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -104,7 +104,7 @@ namespace Extract_PDF_to_TXT
         {
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
-                folderDialog.Description = "Chọn thư mục để lưu file TXT";
+                folderDialog.Description = "Select a folder to save the TXT file";
 
                 if (folderDialog.ShowDialog() == DialogResult.OK)
                 {

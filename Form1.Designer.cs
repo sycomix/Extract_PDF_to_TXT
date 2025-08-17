@@ -50,7 +50,7 @@
             // 
             txtPdfPath.Location = new Point(12, 12);
             txtPdfPath.Name = "txtPdfPath";
-            txtPdfPath.PlaceholderText = "Choose file PDF";
+            txtPdfPath.PlaceholderText = "Choose PDF file";
             txtPdfPath.Size = new Size(600, 23);
             txtPdfPath.TabIndex = 1;
             txtPdfPath.Click += txtPdfPath_TextChanged;
@@ -59,7 +59,7 @@
             // 
             txtOutputFolder.Location = new Point(12, 41);
             txtOutputFolder.Name = "txtOutputFolder";
-            txtOutputFolder.PlaceholderText = "Folder Extract PDF to TXT";
+            txtOutputFolder.PlaceholderText = "Select a folder to save the TXT file";
             txtOutputFolder.Size = new Size(600, 23);
             txtOutputFolder.TabIndex = 2;
             txtOutputFolder.Click += txtOutputFolder_TextChanged;
